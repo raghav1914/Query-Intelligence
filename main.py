@@ -20,7 +20,8 @@ import nltk
 from sentence_transformers import SentenceTransformer, util
 import spacy
 from deepmultilingualpunctuation import PunctuationModel
-
+import nltk
+nltk.download('punkt')
 
 
 
