@@ -575,7 +575,8 @@ def limit_response_length(response):
     # Hardcode the value of max_sentences
     max_sentences = 8  # Change this to your desired value
 
-    sentences = sent_tokenize(response)  # Splitting into sentences
+    english_tokenizer = PunktSentenceTokenizer()
+    sentences = english_tokenizer.tokenize(response)  # Use custom tokenizer
     if len(sentences) > max_sentences:
         return ' '.join(sentences[:max_sentences])  # Limit to max_sentences
     return ' '.join(sentences)  # If fewer than max_sentences, return all
