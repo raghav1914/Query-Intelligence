@@ -4,7 +4,7 @@ from main import ask  # Import the ask function from main.py
 from PIL import Image  # Import to handle local image loading
 import os
 import pandas as pd
-from main import url_cache
+from io import BytesIO
 
 # Load the local image
 image_path = './assets/indago.PNG'   # Update the path to your image
@@ -142,3 +142,15 @@ if submit_button:
         updated_df.to_excel(output_file_path, index=False)
 
         st.success(f"Responses appended and saved to {output_file_path}")
+
+        # Add download functionality for the updated Excel file
+        buffer = BytesIO()
+        updated_df.to_excel(buffer, index=False)
+        buffer.seek(0)
+
+        st.download_button(
+            label="Download Updated Responses",
+            data=buffer,
+            file_name="output_responses.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        )
