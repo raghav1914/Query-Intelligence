@@ -56,3 +56,16 @@ Usage :
 Start the application by running:
    streamlit run app.py   
 The system will provide an interface where users can submit URLs and queries related to companies, products, or other domains. After submitting a URL and a query, the system will scrape   the website for relevant data and provide contextually accurate answers based on the information retrieved. Accuracy is the primary goal, ensuring that the answers provided are precise   and relevant to the user's query.
+
+Sample Questions to Try :
+Here are some sample questions you can ask to get started:
+•	What does the company do?
+•	What are the products and services provided by the company?
+•	Is the company a manufacturer or a distributor?
+•	What are the company's primary products?
+•	What is the company's industry segment?
+•	Where is the company's headquarters located?
+•	Where is the company located in India?
+•	List the company's CEO or owner or CFO or any other management personnel.
+•	List any email addresses available on the website along with contact names and titles.
+
